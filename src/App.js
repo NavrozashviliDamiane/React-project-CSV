@@ -1,7 +1,7 @@
-import "./App.css";
+
 import { useState } from "react";
 import Papa from "papaparse";
-
+import Content from "./components/Content";
 
 function App() {
   // State to store parsed data
@@ -39,13 +39,17 @@ function App() {
       },
     });
   };
+  
 
   return (
-    <div>
+    <div className="main">
+      <Content />
       {/* File Uploader */}
       <input
         type="file"
-        name="file"
+        name="Convert"
+      
+        className="button-63"
         onChange={changeHandler}
         accept=".csv"
         style={{ display: "block", margin: "10px auto" }}
